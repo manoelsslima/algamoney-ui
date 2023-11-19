@@ -1,56 +1,67 @@
 <div class="container">
-  <div class="grid">
+    <div class="grid">
+        <div class="col-12">
+            <h1>Lançamentos</h1>
+        </div>
+
+        <div class="col-12 p-fluid">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" pInputText />
+        </div>
+
+        <div class="col-12">
+            <label for="vencimento" class="display-block">Vencimento</label>
+            <input type="text" id="de" class="data" pInputText />
+
+            <label for="ate">Até</label>
+            <input type="text" id="ate" class="data" pInputText />
+        </div>
+
+        <div class="col-12">
+            <button type="submit" pButton>Pesquisar</button>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="col-12">
+            <p-table [value]="lancamentos" [paginator]="true" [rows]="5">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Pessoa</th>
+                        <th>Descrição</th>
+                        <th>Vencimento</th>
+                        <th>Pagamento</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-lancamento>
+                    <tr>
+                        <td>{{ lancamento.pessoa }}</td>
+                        <td>{{ lancamento.descricao }}</td>
+                        <td class="col-data">{{ lancamento.dataVencimento }}</td>
+                        <td class="col-data">{{ lancamento.dataPagamento }}</td>
+                        <td class="col-valor" [ngStyle]="{color: lancamento.tipo ==='DESPESA' ? 'red' : 'blue'}">
+                            {{lancamento.valor}}
+                        </td>
+                        <td class="col-acoes">
+                            <a pButton icon="pi pi-pencil"></a>
+                            <button pButton icon="pi pi-trash"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="paginatorleft">
+                    <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+                </ng-template>
+                <ng-template pTemplate="paginatorright">
+                    <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+
     <div class="col-12">
-      <h1>Lançamentos</h1>
+        <a pButton>Novo lançamento</a>
     </div>
-
-    <div class="col-12 p-fluid">
-      <label for="descricao">Descrição</label>
-      <input type="text" id="descricao" pInputText />
-    </div>
-
-    <div class="col-12">
-      <label for="vencimento" class="display-block">Vencimento</label>
-      <input type="text" id="de" class="data" pInputText />
-
-      <label for="ate">Até</label>
-      <input type="text" id="ate" class="data" pInputText />
-    </div>
-
-    <div class="col-12">
-      <button type="submit" pButton>Pesquisar</button>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="col-12">
-      <p-table [value]="lancamentos">
-      <ng-template pTemplate="header">
-          <tr>
-              <th>Pessoa</th>
-              <th>Descrição</th>
-              <th>Vencimento</th>
-              <th>Pagamento</th>
-              <th>Valor</th>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-lancamento>
-          <tr>
-              <td>{{ lancamento.pessoa }}</td>
-              <td>{{ lancamento.descricao }}</td>
-              <td class="col-data">{{ lancamento.dataVencimento }}</td>
-              <td class="col-data">{{ lancamento.dataPagamento }}</td>
-              <td class="col-valor">{{ lancamento.valor }}</td>
-          </tr>
-      </ng-template>
-      <ng-template pTemplate="paginatorleft">
-          <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
-      </ng-template>
-      <ng-template pTemplate="paginatorright">
-          <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
-      </ng-template>
-  </p-table>
-    </div>
-  </div>
 
 </div>
