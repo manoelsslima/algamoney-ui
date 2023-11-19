@@ -22,4 +22,35 @@
     </div>
   </div>
 
+  <div class="grid">
+    <div class="col-12">
+      <p-table [value]="lancamentos">
+      <ng-template pTemplate="header">
+          <tr>
+              <th>Pessoa</th>
+              <th>Descrição</th>
+              <th>Vencimento</th>
+              <th>Pagamento</th>
+              <th>Valor</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-lancamento>
+          <tr>
+              <td>{{ lancamento.pessoa }}</td>
+              <td>{{ lancamento.descricao }}</td>
+              <td class="col-data">{{ lancamento.dataVencimento }}</td>
+              <td class="col-data">{{ lancamento.dataPagamento }}</td>
+              <td class="col-valor">{{ lancamento.valor }}</td>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="paginatorleft">
+          <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+      </ng-template>
+      <ng-template pTemplate="paginatorright">
+          <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+      </ng-template>
+  </p-table>
+    </div>
+  </div>
+
 </div>
