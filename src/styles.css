@@ -39,7 +39,7 @@ label {
   text-align: center;
 }
 
-
+/*
 @media (min-width: 40em) {
   .col-valor-header {
     width: 120px;
@@ -69,4 +69,4 @@ label {
   .col-acoes .p-button {
     margin: 1px;
   }
-}
+} */
