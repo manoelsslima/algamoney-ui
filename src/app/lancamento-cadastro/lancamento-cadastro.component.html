@@ -1,0 +1,57 @@
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col">
+                <h1>Novo lançamento</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Receita/despesa
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <label for="dataVencimento" class="form-label">Vencimento</label>
+                <input type="date" name="dataVencimento" class="form-control" pInputText>
+            </div>
+            <div class="col-3">
+                <label for="dataPagamento" class="form-label">Pagamento</label>
+                <input type="date" name="dataPagamento" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-9">
+                <label for="descricao" class="form-label">Descrição</label>
+                <input type="text" name="descricao" class="form-control">
+            </div>
+            <div class="col-3">
+                <label for="valor" class="form-label">Valor</label>
+                <input type="text" name="valor" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6">
+                <label for="categoria" class="form-label">Categoria</label>
+                <select name="categoria" class="form-select">
+                    <option value="">-- Selecione --</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <label for="pessoa" class="form-label">Pessoa</label>
+                <select name="pessoa" class="form-select">
+                    <option value="">-- Selecione --</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="observacao" class="form-label">Observação</label>
+            <textarea name="observacao" class="form-control"></textarea>
+        </div>
+        <div class="d-inline-flex gap-1">
+            <button type="button" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-primary">Novo</button>
+            <a href="#">Voltar para a pesquisa</a>
+        </div>
+    </form>
+</div>
