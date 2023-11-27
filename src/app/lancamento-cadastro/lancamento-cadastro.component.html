@@ -7,17 +7,19 @@
         </div>
         <div class="row">
             <div class="col">
-                Receita/despesa
+              <div class="col-3 mb-3">
+                <p-selectButton [options]="tipos" #tipo></p-selectButton>
+              </div>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-3">
                 <label for="dataVencimento" class="form-label">Vencimento</label>
-                <input type="date" name="dataVencimento" class="form-control" pInputText>
+                <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
             </div>
             <div class="col-3">
-                <label for="dataPagamento" class="form-label">Pagamento</label>
-                <input type="date" name="dataPagamento" class="form-control">
+                <label for="dataRecebimento" class="form-label">{{tipo.value === 'RECEITA' ? 'Recebimento': 'Pagamento'}}</label>
+                <p-calendar dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
             </div>
         </div>
         <div class="row mb-3">

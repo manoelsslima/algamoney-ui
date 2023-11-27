@@ -42,3 +42,12 @@ label {
 .p-datatable .p-datatable-tbody > tr > td {
   padding: 0;
 }
+
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.p-calendar {
+  height: 38px;
+}

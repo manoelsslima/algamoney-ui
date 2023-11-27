@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextModule } from 'primeng/inputtext';
+import { SelectButtonModule } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 
@@ -11,6 +14,7 @@ import { LancamentosPesquisaComponent } from './lancamentos-pesquisa/lancamentos
 import { NavbarComponent } from './navbar/navbar.component';
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
+
 
 @NgModule({
   declarations: [
@@ -21,9 +25,12 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     LancamentoCadastroComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     ButtonModule,
+    CalendarModule,
     InputTextModule,
+    SelectButtonModule,
     TableModule,
     TooltipModule
   ],
