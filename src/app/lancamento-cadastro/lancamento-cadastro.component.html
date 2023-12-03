@@ -34,16 +34,12 @@
         </div>
         <div class="row mb-3">
             <div class="col-6">
-                <label for="categoria" class="form-label">Categoria</label>
-                <select name="categoria" class="form-select">
-                    <option value="">-- Selecione --</option>
-                </select>
+                <label for="categoria" class="form-label display-block">Categoria</label>
+                <p-dropdown [options]="categorias" placeHolder="Selecione"></p-dropdown>
             </div>
             <div class="col-6">
                 <label for="pessoa" class="form-label">Pessoa</label>
-                <select name="pessoa" class="form-select">
-                    <option value="">-- Selecione --</option>
-                </select>
+                <p-dropdown [options]="pessoas" placeHolder="Selecione"></p-dropdown>
             </div>
         </div>
         <div class="row mb-3">

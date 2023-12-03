@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
+import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
@@ -29,6 +30,7 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     BrowserModule,
     ButtonModule,
     CalendarModule,
+    DropdownModule,
     InputTextModule,
     SelectButtonModule,
     TableModule,
