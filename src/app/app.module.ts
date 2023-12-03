@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectButtonModule } from 'primeng/selectbutton';
@@ -30,6 +31,7 @@ import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-ca
     BrowserModule,
     ButtonModule,
     CalendarModule,
+    CurrencyMaskModule,
     DropdownModule,
     InputTextModule,
     SelectButtonModule,
